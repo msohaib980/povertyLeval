@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>150% of poverty leval</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+      $(document).ready(function(){
+
+
+      $('#button').click(function(){
+        var w1 = parseInt($("#week1").val());
+        var w2 =  parseInt($("#week2").val());
+        var w3 =  parseInt($("#week3").val());
+        var w4 =  parseInt($("#week4").val());
+        var w5 =  parseInt($("#week5").val());
+        var w6 =  parseInt($("#week6").val());
+
+        var totalsum = (w1+w2+w3+w4+w5+w6)
+        var averageWeekAmount = totalsum/6
+        var perYearIncome = averageWeekAmount*52
+
+        $("#perYearIncome").text(perYearIncome)
+
+        console.log(totalsum)
+        console.log(averageWeekAmount)
+        console.log(perYearIncome)
+
+
+
+        // var sumOfWeeks = (w1+w2+w3+w4+w5+w6)/totalsum
+
+        // console.log(typeof(w1))
+        // console.log(typeof(w2))
+        // console.log(w3)
+        // console.log(w4)
+        // console.log(w5)
+        // console.log(w6)
+        // console.log(sumOfWeeks)
+
+      });
+      });
+  </script>
+<body>
+  <div class="container">
+
+    <table class="table-bordered">
+      <tr>
+        <label for="WeekOne">Week One</label>
+        <input type="number" name="" id="week1">
+        <label for="WeekOne">Week Two</label>
+        <input type="number" name="" id="week2">
+        <label for="WeekOne">Week Three</label>
+        <input type="number" name="" id="week3">
+        <label for="WeekOne">Week Four</label>
+        <input type="number" name="" id="week4">
+        <label for="WeekOne">Week Five</label>
+        <input type="number" name="" id="week5">
+        <label for="WeekOne">Week Six</label>
+        <input type="number" name="" id="week6">
+      </tr>
+      <!-- <tr>
+      <label for="total">Number of Weeks</label>
+      <input type="number" id="totalsum">
+    </tr> -->
+    <tr>
+      <button id ="button">Calculate</button>
+    </tr>
+  </table>
+  <div class="resultTable">
+      <span id="perYearIncome"></span>
+  </div>
+  </div>
+
+</body>
+</html>
